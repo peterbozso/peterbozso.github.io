@@ -6,9 +6,9 @@ categories: qna-maker
 ---
 *This blog post is about the new Global Availability version of the QnA Maker service. You can read the announcement **[at the Bot Framework blog.][qna-ga-announcement]***
 
-During the past week, while working with one of my customers, I faced a challenge that seemed easy at first glance but proved to be a much harder nut to crack when I started to look into the details. I spent the good portion of a day to figure these stuff out, so I hope I can spare that amount of time for you by writing this blog post.
+During the past week, while working with one of my customers, I faced a challenge that seemed easy at first glance but proved to be a much harder nut to crack when I started to look into the details. I spent the good portion of a day figuring these stuff out, so I hope I can spare that amount of time for you by writing this blog post.
 
-The challenge was the following: I needed to provision a QnA Maker service instance, create a knowledge base on top of it and then publish it, doing all this in an automated way. Sound easy, right? Actually, it is: we have ARM templates, nice API-s, all those good stuffs. The big challenge was that I had to make sure that the language analyzers of the underlying Azure Search are set correctly to the language of the knowledge base. This is where things got a little bit complicated.
+The challenge was the following: I needed to provision a QnA Maker service instance, create a knowledge base on top of it and then publish it, doing all this in an automated way. Sounds easy, right? Actually, it is: we have ARM templates, nice API-s, all those good stuffs. The big challenge was that I had to make sure that the language analyzers of the underlying Azure Search are set correctly to the language of the knowledge base. This is where things got a little bit complicated.
 
 But let's not get ahead of ourselves and start at the beginning!
 
