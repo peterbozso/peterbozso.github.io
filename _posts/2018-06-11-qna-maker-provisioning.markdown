@@ -46,7 +46,7 @@ The easiest way to get such an ARM template for a QnA Maker Service is to first 
 
 ### 2. Create a knowledge base with dummy data via the API
 
-This was the bit which took most of my time to figure out. As the documentation states (see quote above), when you first create a knowledge base for a QnA Maker service, it will try to figure out the language of the knowledge base and set the analyzer's language in the underlying Azure Search accordingly. What I discovered while playing around with the API is that this language recognition works reliable only for "big enough" data set of question and answer pairs. It works for a single pair in the rarest of cases, mostly just falling back to English which is obviously not acceptable at all.
+This was the bit which took most of my time to figure out. As the documentation states (see quote above), when you first create a knowledge base for a QnA Maker service, it will try to figure out the language of the knowledge base and set the analyzer's language in the underlying Azure Search accordingly. What I discovered while playing around with the API is that this language recognition works reliable only for "big enough" data sets of question and answer pairs. It works for a single pair in the rarest of cases, mostly just falling back to English which is obviously not acceptable at all.
 
 So let's say you create a knowledge base with a single QnA pair using [the appropriate API][qna-api-create], with the HTTP request's body looking like this:
 
