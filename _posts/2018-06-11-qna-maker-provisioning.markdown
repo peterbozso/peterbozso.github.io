@@ -100,7 +100,7 @@ To fix this, we need to replace the previously created knowledge base's content 
 
 This step is optional and depends on which state you plan to hand over the freshly created knowledge base to your users. In our case - as I mentioned before - QnA Maker was just part of a bigger solution, so we wanted to make sure that every part of it available before giving the whole thing to the users to play around with.
 
-Luckily, this part is very easy. All you need to do is just to POST [the publish knowledge base endpoint][qna-api-publish].
+Luckily, this part is very easy. All you need to do is just POST [the publish knowledge base endpoint][qna-api-publish].
 
 ## Conclusion
 
