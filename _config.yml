@@ -17,7 +17,7 @@ title: Péter Bozsó's blog
 description: >- # this means to ignore newlines until "baseurl:"
   Personal blog about interesting technical challenges I stumble upon occasionally while using Azure and its surrounding technologies.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: https://peterbozso.github.io/ # the base hostname & protocol for your site, e.g. http://example.com
 linkedin_username: peterbozso
 github_username:  peterbozso
 
@@ -26,6 +26,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
