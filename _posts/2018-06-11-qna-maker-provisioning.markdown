@@ -66,7 +66,7 @@ So let's say you create a knowledge base with a single QnA pair using [the appro
 
 No matter how Italian it looks to you, QnA Maker will happily set the underlying Azure Search's analyzers to English.
 
-The way we can fix this is by feeding QnA Maker a "big enough" set of data initially and then it will pick up it's language correctly. I really don't have a concrete number of question and answer pairs with which it will work correctly. My workaround for this was (somewhat ironically :)) to use the FAQ page of QnA Maker itself, always changing it's language accordingly. So in case we want to create a knowledge base and want to make super sure that the underlying service's language will be set to Italian, we call the API with the following body:
+The way we can fix this is by feeding QnA Maker a "big enough" set of data initially and then it will pick up it's language correctly. I really don't have a concrete number of question and answer pairs with which it will work correctly. My workaround for this was (somewhat ironically) to use the FAQ page of QnA Maker itself, always changing it's language accordingly. So in case we want to create a knowledge base and want to make super sure that the underlying service's language will be set to Italian, we call the API with the following body:
 
 {% highlight json %}
 {
