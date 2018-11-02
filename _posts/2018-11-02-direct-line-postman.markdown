@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Debugging a Microsoft Bot Framework chatbot through the Direct Line API 3.0"
-date:   2018-06-11 08:00:00 +0200
+date:   2018-11-02 08:00:00 +0200
 ---
 To put this post in context, let's assume for a minute that you are developing a chatbot with the Microsoft Bot Framework which integrates with some unsupported channels (for example Viber or your very own native mobile application) using the Direct Line API. In this case, there's a very high chance that you'd like to test and debug the bot end-to-end in a test environment (be it on Azure or on your local computer - more about the latter [here](https://blogs.msdn.microsoft.com/jamiedalton/2016/07/29/ms-bot-framework-ngrok/)) through the Direct Line before deploying it into production. Postman is just the perfect tool for such a task!
 
