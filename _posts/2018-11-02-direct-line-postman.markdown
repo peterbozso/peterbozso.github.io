@@ -81,4 +81,4 @@ After this, if you issue any of the other three requests that have the **convers
 
 ## Summary
 
-I am using this small Postman package almost daily in my job and it proved to be a great productivity boost to me during the past half year. I hope you'll find equally useful!
+I am using this small Postman package almost daily in my job and it proved to be a great productivity boost to me during the past half year. I hope you'll find it equally useful!
