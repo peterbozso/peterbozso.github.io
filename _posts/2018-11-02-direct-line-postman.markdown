@@ -9,9 +9,9 @@ Since you are reading this article, I assume that you are more or less familiar 
 
 ## Postman package
 
-To get quickly up to speed, you can find a Postman collection and a default environment I use for my own testings packed together in [this repository](https://github.com/peterbozso/directline-postman).
+To get quickly up to speed, you can find a Postman collection and a default environment I use for my own testings packed together in [this repository](https://github.com/BotBuilderCommunity/botbuilder-community-tools/tree/master/directline-postman).
 
-After downloading the package, you can [import the whole thing in one step](https://www.getpostman.com/docs/v6/postman/collections/data_formats) into Postman by using the Import Folder functionality and choosing the **Direct Line 3.0 Postman** folder in your freshly cloned local repository.
+After downloading the package, you can [import the whole thing in one step](https://www.getpostman.com/docs/v6/postman/collections/data_formats) into Postman by using the Import Folder functionality and choosing the **directline-postman** folder in your freshly cloned local repository.
 
 This neat little package contains four requests that I use frequently for testing the chatbots I develop:
 
