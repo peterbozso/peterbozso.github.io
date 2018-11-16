@@ -30,7 +30,7 @@ Using those four request types, my usual testing workflow looks like this:
 
 In the above list, sending an event and sending a message are pretty similar, since they are POST-ing the very same endpoint, but with a different body. The reason I included both is because these are the two Activity types I use the most during my testings. Of course, based on these and the [schema's documentation](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object), sending your very own activity object is easy-peasy.
 
-This is all pretty basic Postman usage so far. But to make the developer experience even more streamlined and less error prone, I used two more advanced Postman features in this package: environments and tests.
+This is all pretty basic Postman usage so far. But to get the authentication working and to make the developer experience even more streamlined and less error prone, I used two more advanced Postman features in this package: environments and tests.
 
 ## Postman environments
 
