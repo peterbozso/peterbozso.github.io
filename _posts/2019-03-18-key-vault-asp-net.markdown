@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Using Azure Key Vault in ASP.NET"
-date:   2018-03-18 06:00:00 +0200
+date:   2019-03-18 06:00:00 +0200
 ---
 
 *Note: This tutorial heavily depends on the configuration mechanisms provided by [configuration builders][config-builders] what are only available in .NET Framework 4.7.1 and later. The tutorial also assumes that you already host your web application on Azure App Service.*
