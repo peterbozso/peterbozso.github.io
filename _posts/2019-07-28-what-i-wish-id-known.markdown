@@ -4,7 +4,7 @@ title:  "What I wish I'd known three years ago"
 date:   2019-07-28 06:00:00 +0200
 ---
 
-*The title is a slight reference to Paul Graham's excellent talk titled ["What You'll Wish You'd Known"](http://paulgraham.com/hs.html). Personally I really love it, it's a highly recommended read - especially for young and clueless people.*
+*The title is a slight reference to Paul Graham's excellent talk titled ["What You'll Wish You'd Known".](http://paulgraham.com/hs.html) Personally I really love it, it's a highly recommended read - especially for young and clueless people.*
 
 <br/>
 
