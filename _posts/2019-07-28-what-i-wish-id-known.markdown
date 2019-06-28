@@ -6,6 +6,8 @@ date:   2019-07-28 06:00:00 +0200
 
 *The title is a slight reference to Paul Graham's excellent talk titled ["What You'll Wish You'd Known"](http://paulgraham.com/hs.html). Personally I really love it, it's a highly recommended read - especially for young and clueless people.*
 
+<br/>
+
 If you ask me, three years is a lot of time. Since I am leaving Microsoft soon and this is the third fiscal year that I've spent as a consultant at the company, I though it would be nice to look back and gather the key learnings from this period. I learned incredibly lot during these years, because Microsoft was my first true multi-national corporate job, with all it's good and bad.
 
 So I was thinking recently: how could I recap that? What advices would I give myself, if I could travel back in time and have a short chat with my younger self? I looked back, wrote those advices down and you can read them below. (The order of the advices has nothing to do with their priority.)
@@ -67,5 +69,7 @@ Always give constructive feedback, as objectively as possible. Never start turni
 ## Pay attention to your health
 
 I am sure that working extremely long hours and pulling off incredible technical feats are nice and your customers and employer will be thankful for it in a way or another. But being able to use your legs after the age of 30 is even nicer and I am sure you will thank yourself for that even more. Don't fall for the usual trap that a lot of people who do intellectual work fall for and don't let your body dwindle while you train your brain. Work will wait, but your health won't. Do a favor for your future self and your loved ones and make sure you dedicate enough time and energy to your well-being: do regular exercises, eat healthy and sleep well. And buy a vertical mouse **before** your wrist starts to hurt!
+
+<br/>
 
 *Even though I've worked with a lot of exceptional people during my short career at Microsoft, I would like to say special thanks to three particular persons who made the greatest impact on me both personally and professionally. Those are Erzsébet Jenet, Genady Belenky and Francesco Tumiatti. Thank you for sharing your experience with me and guiding my steps through the past couple of years! It was truly a privilege working with you.*
