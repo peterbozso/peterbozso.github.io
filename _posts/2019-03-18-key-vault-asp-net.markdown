@@ -4,9 +4,9 @@ title:  "Using Azure Key Vault in ASP.NET"
 date:   2019-03-18 06:00:00 +0200
 ---
 
-*Note: This tutorial heavily depends on the configuration mechanisms provided by [configuration builders][config-builders] what are only available in .NET Framework 4.7.1 and later. The tutorial also assumes that you already host your web application on Azure App Service.*
+*Note: This tutorial heavily depends on the configuration mechanism provided by [configuration builders][config-builders] what is only available in .NET Framework 4.7.1 and later. The tutorial also assumes that you already host your web application on Azure App Service.*
 
-Key Vault is a very handy Azure service which you can use to avoid storing credentials in your code and in your version control system, thus reducing the chance of those secrets being compromised. Instead of storing for example a connection string in your `Web.config` (in case of ASP.NET), you can store that credential in this cloud service which your app can authenticate against with Azure Active Directory, have role-based access control and use many more of it's great features. Please refer to [the official documentation of Key Vault][key-vault-overview] for further information.
+Key Vault is a very handy Azure service which you can use to avoid storing credentials in your code and in your version control system, thus reducing the chance of those secrets being compromised. Instead of storing for example a connection string in your `Web.config` (in case of ASP.NET), you can store that credential in this cloud service which your app can authenticate against with Azure Active Directory, have role-based access control and use many more of its great features. Please refer to [the official documentation of Key Vault][key-vault-overview] for further information.
 
 It's quite trivial to integrate Azure Key Vault with an ASP.NET Core application running on Azure App Service, because there are tons of documentation and examples out there. On the other hand, doing the same with classic ASP.NET (targeting the full .NET Framework, not .NET Core), the resources are a bit sparser and scattered and thus it requires considerably more figuring out on the side of the developer. That's why I'd like to give here an easy to follow, step-by-step tutorial about doing the latter, while pointing out the potential pitfalls during the process.
 
@@ -14,7 +14,7 @@ If you are working with Key Vault and Azure App Service, I also highly recommend
 
 ## The goal of this tutorial
 
-The whole premise of this tutorial is to show you how to take an existing ASP.NET application running in Azure App Service and without touching the C# code, configure it in a way that it will retrieve it's sensitive configuration values from a Key Vault instead of it's `Web.config` file. So when you'd write for example `ConfigurationManager.AppSettings["StorageConnectionString"]` somewhere in your application, that value would come directly from a secret in Key Vault. All without modifying anything in the actual source code of your app.
+The whole premise of this tutorial is to show you how to take an existing ASP.NET application running in Azure App Service and without touching the C# code, configure it in a way that it will retrieve its sensitive configuration values from a Key Vault instead of its `Web.config` file. So when you'd write for example `ConfigurationManager.AppSettings["StorageConnectionString"]` somewhere in your application, that value would come directly from a secret in Key Vault. All without modifying anything in the actual source code of your app.
 
 I will also describe a more advanced scenario which will make your Web App integrated with Key Vault very easily redeployable into new environments.
 
@@ -29,11 +29,11 @@ Before you can access them from your code, you need to add those secrets to the 
 ## Give access to your Web App to the secrets stored in Key Vault
 
 The tricky part comes when you'd like to access those secrets from your ASP.NET application.
-Before actually touching the code, you need to make sure that the Web App which will host your application will be able to authenticate against your Key Vault. In order to do that, it's best to use the Web App's [managed identity][managed-identity] feature.
+Before actually touching the code, you need to make sure that the Web App which will host your application is able to authenticate against your Key Vault. In order to do that, it's best to use the Web App's [managed identity][managed-identity] feature.
 
-In a nutshell, this feature will provide your Web App with it's own identity in your Azure Active Directory and your application will be able to authenticate with Key Vault using that identity. The benefit of this is that the only information you'll need to pass to your application is the name of your Key Vault instance to connect to. This way, you will be able to keep ALL sensitive data in Key Vault, since you won't need to store any credentials to connect to the Key Vault itself, everything is handled by Azure. More info on this topic can be found [here][key-vault-managed-identity].
+In a nutshell, this feature will provide your Web App with its own identity in your Azure Active Directory and your application will be able to authenticate with Key Vault using that identity. The benefit of this is that the only information you'll need to pass to your application is the name of your Key Vault instance to connect to. This way, you will be able to keep ALL sensitive data in Key Vault, since you won't need to store any credentials to connect to the Key Vault itself, everything is handled by Azure. More info on this topic can be found [here][key-vault-managed-identity].
 
-After you've set up managed identity for your Web App, you need to tell your Azure Key Vault to let that application access it's secrets. If you do that via the Azure Portal, you need to open your Key Vault instance and do the configuration on the **Access policies** blade. In this case there are two pitfalls (both reported in [this GitHub issue][github-issue]) that you must make sure to avoid if you don't want to scratch your head later while thinking about why nothing works while you did everything (supposedly) right.
+After you've set up managed identity for your Web App, you need to tell your Azure Key Vault to let that application access its secrets. If you do that via the Azure Portal, you need to open your Key Vault instance and do the configuration on the **Access policies** blade. In this case there are two pitfalls (both reported in [this GitHub issue][github-issue]) that you must make sure to avoid if you don't want to scratch your head later while thinking about why nothing works while you did everything (supposedly) right.
 
 [First][github-issue-1st], make sure you only set the **Select principal** field to your Web App's managed identity and leave the **Authorized application** field blank.
 
@@ -65,13 +65,13 @@ Now if you deploy your application to the Azure Web App which you gave access to
 
 ### Debugging locally
 
-You might have noticed that at the moment the only credential your application knows about the Key Vault instance it should connect to is it's name or it's URI. (In the above example I kept the name, but it's up to you which one you choose.) No ID-s, no secrets, nothing. Then how will the app authenticate to Key Vault to access it's secrets? If you deploy your application to an Azure Web App, the question has already been answered earlier in this tutorial: using your app's managed identity.
+You might have noticed that at the moment the only credential your application knows about the Key Vault instance it should connect to is its name or its URI. (In the above example I kept the name, but its up to you which one you choose.) No ID-s, no secrets, nothing. Then how will the app authenticate to Key Vault to access its secrets? If you deploy your application to an Azure Web App, the question has already been answered earlier in this tutorial: using your app's managed identity.
 
-But to be able debug your application locally with Visual Studio, you'll need to setup one more thing. The thing you need is [this extension][vs-auth-extension] for older version of Visual Studio - the newer releases contain this feature by default. Nevertheless, you need to follow the steps outlined in it's description to authenticate with your Azure account in VS. After that you need to add that very same account to Key Vault, exactly the same way as you did with the service principal earlier. (If you used the same account for provisioning the Key Vault, it will be already there.) After this, whenever you debug your application locally, it will authenticate against Key Vault using your own Azure account and your app will be able to access the secrets just like when it is running on App Service. You can read about how this all works under the hood [here][github-ms-sample].
+But to be able debug your application locally with Visual Studio, you'll need to setup one more thing. The thing you need is [this extension][vs-auth-extension] for older version of Visual Studio - the newer releases contain this feature by default. Nevertheless, you need to follow the steps outlined in its description to authenticate with your Azure account in VS. After that you need to add that very same account to Key Vault, exactly the same way as you did with the service principal earlier. (If you used the same account for provisioning the Key Vault, it will be already there.) After this, whenever you debug your application locally, it will authenticate against Key Vault using your own Azure account and your app will be able to access the secrets just like when it is running on App Service. You can read about how this all works under the hood [here][github-ms-sample].
 
 ### Advanced configuration
 
-So far everything is in Key Vault and you can even debug your app locally. But there's one ugly piece left: the Key Vault's name itself is still hardcoded in the `Web.config` file. If you only plan to deploy your app to one particular environment, it might not be a problem, but in the world of Agile, DevOps and CI/CD, I highly doubt that you would like to keep it that way. Of course you can use some XML transformation as part of your CI/CD pipeline, so you replace the name of the Key Vault before each deployment, but I have an even more elegant solution for this.
+So far everything is in Key Vault and you can even debug your app locally. But there's one ugly piece left: the Key Vault's name itself is still hardcoded in the `Web.config` file. If you only plan to deploy your app to one particular environment, it might not be a problem, but in the world of Agile, DevOps and CI/CD, I highly doubt that you would like to keep it that way. Of course you can use some XML transformation as part of your CI/CD pipeline to replace the name of the Key Vault before each deployment, but I have an even more elegant solution for this.
 
 First, update the `Microsoft.Configuration.ConfigurationBuilders.Azure` NuGet package to 2.0.0-beta. Even though this is (as it's name indicates) a beta version at the time of writing, I already used it extensively and haven't experienced any issues. You also need to install the same version of the `Microsoft.Configuration.ConfigurationBuilders.Environment` NuGet package.
 Installing these will reset your previous changes to the `configBuilders` section of your `Web.config`, so go ahead and configure it again, but this time like this:
@@ -101,7 +101,7 @@ For more details about how these all works under the hood, please refer to the [
 
 ## Automated deployment
 
-One obvious benefit of the above discussed advanced configuration is that makes extremely easy to deploy a the infrastructure in Azure for your application to different environments.
+One obvious benefit of the above discussed advanced configuration is that it makes extremely easy to deploy the infrastructure of your application to different Azure environments.
 
 [Here][github-sample] you can find a [sample application][github-sample-application] that contains the implementation of the above detailed steps **plus** an [ARM template][github-arm] that you can use as a basis of your own deployments. So if you want to see everything we discussed so far in motion, just deploy the ARM template to Azure, publish the sample application into the freshly created Web App, send an HTTP GET request to it's /api/values endpoint and in the response you will be able to see the value of the secret you've saved in the Key Vault during the ARM deployment.
 
@@ -153,7 +153,7 @@ Then, when we create the Key Vault, we add that identity to it's access policies
 
 ## Conclusion
 
-This is the closest solution I found to mimicking configuration providers from ASP.NET Core in ASP.NET. This is just one possible way of using config builders in ASP.NET and I think this tutorial shows perfectly the flexibility of this relatively small piece of the framework.
+This is the closest solution I found to mimic configuration providers from ASP.NET Core in ASP.NET. This is just one possible way of using config builders in ASP.NET and I think this tutorial shows perfectly the flexibility of this relatively small piece of the framework.
 
 [key-vault-overview]: https://docs.microsoft.com/en-us/azure/key-vault/key-vault-overview
 [github-ms-sample]: https://github.com/Azure-Samples/app-service-msi-keyvault-dotnet
