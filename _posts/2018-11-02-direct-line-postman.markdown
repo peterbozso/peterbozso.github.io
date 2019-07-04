@@ -46,7 +46,7 @@ I choose to go with using the Direct Line secret, since generating a token for e
 
 To use the same Direct Line secret in all the requests, I am using an environment variable which (after importing the folder) you can find in the **Direct Line 3.0** environment. You need to set the value of the **directLineSecret** variable to your own secret. The imported collection (which is named **Direct Line 3.0** as well) then uses this variable to set the **Authorization** header of all the requests contained in it. For more information see the **Inherit auth from parent** section [here][postman-auth].
 
-Of course, I could have simply put the Direct Line secret directly into the collection's auth settings. But it's rare for me to work on only one chatbot project (or only one instance of the same chatbot) at the same time. Doing it this way, through an environment variable, you can easily switch between chatbots by adding a new environment containing a variable named **directLineSecret** with it's value set to the other chatbot's secret. Then you just select the correct environment from the dropdown on the upper right corner of the main Postman window instead of doing the tedious ritual of right click on collection name -> Edit -> Authorization -> replace the Auth token every time you need to switch between bots.
+Of course, I could have simply put the Direct Line secret directly into the collection's auth settings. But it's rare for me to work on only one chatbot project (or only one instance of the same chatbot) at the same time. Doing it this way, through an environment variable, you can easily switch between chatbots by adding a new environment containing a variable named **directLineSecret** with its value set to the other chatbot's secret. Then you just select the correct environment from the dropdown on the upper right corner of the main Postman window instead of doing the tedious ritual of right click on collection name -> Edit -> Authorization -> replace the Auth token every time you need to switch between bots.
 
 ### Conversation ID
 
@@ -75,7 +75,7 @@ pm.test("Save conversation ID", () => {
     pm.environment.set("conversationId", jsonData.conversationId);
 });
 ```
-This is a pretty trivial piece of code: first we deserialize the content of the response of our request as a JSON object, and then we save it's **conversationId** property as the value of our environment variable.
+This is a pretty trivial piece of code: first we deserialize the content of the response of our request as a JSON object, and then we save its **conversationId** property as the value of our environment variable.
 
 After this, if you issue any of the other three requests that have the **conversationId** variable in the URL, they will interact with the correct conversation. Also, since we are saving the conversation ID in an environment variable, you can edit its value anytime on the UI of Postman as well. This could come in handy when one of your co-workers or customers sends you a conversation ID and ask you to check the history or do some debugging on that specific conversation.
 

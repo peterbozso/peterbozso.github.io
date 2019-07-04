@@ -8,7 +8,7 @@ date:   2019-07-28 06:00:00 +0200
 
 <br/>
 
-If you ask me, three years is a lot of time. Since I am leaving Microsoft soon and this is the third fiscal year that I've spent as a consultant at the company, I though it would be nice to look back and gather the key learnings from this period. I learned incredibly lot during these years, because Microsoft was my first true multi-national corporate job, with all it's good and bad.
+If you ask me, three years is a lot of time. Since I am leaving Microsoft soon and this is the third fiscal year that I've spent as a consultant at the company, I though it would be nice to look back and gather the key learnings from this period. I learned incredibly lot during these years, because Microsoft was my first true multi-national corporate job, with all its good and bad.
 
 So I was thinking recently: how could I recap that? What advices would I give myself, if I could travel back in time and have a short chat with my younger self? I looked back, wrote those advices down and you can read them below. (The order of the advices has nothing to do with their priority.)
 
