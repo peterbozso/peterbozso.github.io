@@ -4,7 +4,7 @@ title:  "What I wish I'd known three years ago"
 date:   2019-07-28 06:00:00 +0200
 ---
 
-*The title is a slight reference to Paul Graham's excellent talk titled ["What You'll Wish You'd Known".][pg-talk] Personally I really love it, it's a highly recommended read - especially for young and clueless people.*
+*The title is a slight reference to Paul Graham's excellent talk titled ["What You'll Wish You'd Known"][pg-talk]. Personally I really love it, it's a highly recommended read - especially for young and clueless people.*
 
 <br/>
 
@@ -34,7 +34,7 @@ Being on time is one way to show respect for your partner (which is not based on
 
 Stay up to date and be hands-on with technologies you use and talk about. Of course you can bluff your way through a lot of situations, but sooner or later people will see right through you and that's the worst possible situation that you can get yourself into. Keep it real and dedicate time to your technical readiness. Nobody in our industry can afford the luxury of not learning constantly. You either do this, or you'll become irrelevant in a matter of months if not weeks.
 
-Also, in our industry, everybody who worth their salt must posses [T-shaped skills.][t-shape] It's pretty much the only way to be a valuable part of a proper IT team. So pick one or two fields where you become an expert, but don't ignore the surrounding technologies, especially the ones that can be directly connected to yours. Otherwise you'll quickly end up as a coder instead of a software developer.
+Also, in our industry, everybody who worth their salt must posses [T-shaped skills][t-shape]. It's pretty much the only way to be a valuable part of a proper IT team. So pick one or two fields where you become an expert, but don't ignore the surrounding technologies, especially the ones that can be directly connected to yours. Otherwise you'll quickly end up as a coder instead of a software developer.
 
 ## Approach problems the right way
 
