@@ -52,7 +52,9 @@ Of course, I could have simply put the Direct Line secret directly into the coll
 
 If you look at the requests in the collection, you'll see that all of them (except **Start conversation**) have this URL:
 
->https://directline.botframework.com/v3/directline/conversations/{% raw  %}{{conversationId}}{% endraw  %}/activities
+```
+https://directline.botframework.com/v3/directline/conversations/{% raw  %}{{conversationId}}{% endraw  %}/activities
+```
 
 To make the debugging as easy as possible, I choose to store the conversation ID which is returned by the **Start conversation** request in the **conversationId** variable. Then I re-use it in consequent requests, so they will all work in the context of the same conversation. I do this until the next **Start conversation** request, which of course changes the value of the variable.
 

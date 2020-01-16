@@ -14,7 +14,13 @@ If you are working with Key Vault and Azure App Service, I also highly recommend
 
 ## The goal of this tutorial
 
-The whole premise of this tutorial is to show you how to take an existing ASP.NET application running in Azure App Service and without touching the C# code, configure it in a way that it will retrieve its sensitive configuration values from a Key Vault instead of its `Web.config` file. So when you'd write for example `ConfigurationManager.AppSettings["StorageConnectionString"]` somewhere in your application, that value would come directly from a secret in Key Vault. All without modifying anything in the actual source code of your app.
+The whole premise of this tutorial is to show you how to take an existing ASP.NET application running in Azure App Service and without touching the C# code, configure it in a way that it will retrieve its sensitive configuration values from a Key Vault instead of its `Web.config` file. So when you'd write for example
+
+```csharp
+ConfigurationManager.AppSettings["StorageConnectionString"]
+```
+
+somewhere in your application, that value would come directly from a secret in Key Vault. All without modifying anything in the actual source code of your app.
 
 I will also describe a more advanced scenario which will make your Web App integrated with Key Vault very easily redeployable into new environments.
 
@@ -73,7 +79,19 @@ But to be able debug your application locally with Visual Studio, you'll need to
 
 So far everything is in Key Vault and you can even debug your app locally. But there's one ugly piece left: the Key Vault's name itself is still hardcoded in the `Web.config` file. If you only plan to deploy your app to one particular environment, it might not be a problem, but in the world of Agile, DevOps and CI/CD, I highly doubt that you would like to keep it that way. Of course you can use some XML transformation as part of your CI/CD pipeline to replace the name of the Key Vault before each deployment, but I have an even more elegant solution for this.
 
-First, update the `Microsoft.Configuration.ConfigurationBuilders.Azure` NuGet package to 2.0.0-beta. Even though this is (as it's name indicates) a beta version at the time of writing, I already used it extensively and haven't experienced any issues. You also need to install the same version of the `Microsoft.Configuration.ConfigurationBuilders.Environment` NuGet package.
+First, update the
+
+```
+Microsoft.Configuration.ConfigurationBuilders.Azure
+```
+
+NuGet package to 2.0.0-beta. Even though this is (as it's name indicates) a beta version at the time of writing, I already used it extensively and haven't experienced any issues. You also need to install the same version of the
+
+```
+Microsoft.Configuration.ConfigurationBuilders.Environment
+```
+
+NuGet package.
 Installing these will reset your previous changes to the `configBuilders` section of your `Web.config`, so go ahead and configure it again, but this time like this:
 
 ```xml
