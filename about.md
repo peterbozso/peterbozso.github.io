@@ -6,7 +6,7 @@ permalink: /about/
 
 My name is Péter Bozsó and I am a freelance consultant, specialized in Microsoft technologies, especially the application development parts of Azure. I am an ex-Microsoftie and I have a demonstrated history of working in the computer software industry.
 
-I help my customers by providing valuable technical and architectural guidance as well as hands-on help with the implementation of their projects targeting many different client-side technologies (Microsoft Bot Framework, React, Angular, ASP.NET Core, Xamarin, UWP) and the underlying infrastructure for all of them: Azure. I also support my customers transforming their software development process to follow Agile best practices by utilizing Azure DevOps.
+I help my customers by providing valuable technical and architectural guidance as well as hands-on help with the implementation of their projects targeting many different client-side technologies (React, ASP.NET Core, Microsoft Bot Framework) and the underlying infrastructure for all of them: Azure. I also support my customers transforming their software development process to follow Agile best practices by utilizing Azure DevOps.
 
 If you'd like to involve me in one of your projects, please feel free to [contact me](mailto:peter.bozso@outlook.com). Currently I am only interested in fully remote opportunities.
 
