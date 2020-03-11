@@ -3,6 +3,7 @@ layout: post
 title:  "Provisioning a QnA Maker knowledge base programmatically"
 date:   2018-06-11 12:00:00 +0200
 ---
+
 *This blog post is about the new Global Availability version of the QnA Maker service. You can read the announcement **[at the Bot Framework blog.][qna-ga-announcement]***
 
 During the past week, while working with one of my customers, I faced a challenge that seemed easy at first glance but proved to be a much harder nut to crack when I started to look into the details. I spent the good portion of a day figuring these stuff out, so I hope I can spare that amount of time for you by writing this blog post.
