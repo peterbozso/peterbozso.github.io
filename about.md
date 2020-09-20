@@ -4,6 +4,8 @@ title: About
 permalink: /about/
 ---
 
+![Profile picture](/assets/profile_picture.jpg)
+
 My name is Péter Bozsó and I am a freelance Azure consultant, specialized in application development. I am an ex-Microsoftie and I am equally comfortable with working as a lone contributor as well as leading a team of developers.
 
 ## I can help your team with
