@@ -22,9 +22,8 @@ My name is Péter Bozsó and I am a freelance Azure consultant, specialized in a
 * Azure
 * .NET (Core)
 * ASP.NET (Core)
+* Blazor
 * Microsoft Bot Framework
-* TypeScript
-* React
 * PowerShell
 * Docker
 * Azure DevOps
